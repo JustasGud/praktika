@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UtilityBillingSystem.Application/1.0.0": {
+        "dependencies": {
+          "UtilityBillingSystem.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UtilityBillingSystem.Application.dll": {}
+        }
+      },
+      "UtilityBillingSystem.Domain/1.0.0": {
+        "runtime": {
+          "UtilityBillingSystem.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UtilityBillingSystem.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UtilityBillingSystem.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

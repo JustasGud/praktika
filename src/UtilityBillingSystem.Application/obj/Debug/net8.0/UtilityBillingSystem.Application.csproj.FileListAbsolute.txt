@@ -1,0 +1,15 @@
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\bin\Debug\net8.0\UtilityBillingSystem.Application.deps.json
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\bin\Debug\net8.0\UtilityBillingSystem.Application.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\bin\Debug\net8.0\UtilityBillingSystem.Application.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\bin\Debug\net8.0\UtilityBillingSystem.Domain.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\bin\Debug\net8.0\UtilityBillingSystem.Domain.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.csproj.AssemblyReference.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.AssemblyInfoInputs.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.AssemblyInfo.cs
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.csproj.CoreCompileInputs.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityB.C8151E41.Up2Date
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\refint\UtilityBillingSystem.Application.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\UtilityBillingSystem.Application.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Application\obj\Debug\net8.0\ref\UtilityBillingSystem.Application.dll

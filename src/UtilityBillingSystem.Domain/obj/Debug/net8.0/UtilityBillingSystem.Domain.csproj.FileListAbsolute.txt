@@ -1,0 +1,11 @@
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\bin\Debug\net8.0\UtilityBillingSystem.Domain.deps.json
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\bin\Debug\net8.0\UtilityBillingSystem.Domain.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\bin\Debug\net8.0\UtilityBillingSystem.Domain.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\UtilityBillingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\UtilityBillingSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\UtilityBillingSystem.Domain.AssemblyInfo.cs
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\UtilityBillingSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\UtilityBillingSystem.Domain.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\refint\UtilityBillingSystem.Domain.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\UtilityBillingSystem.Domain.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Domain\obj\Debug\net8.0\ref\UtilityBillingSystem.Domain.dll

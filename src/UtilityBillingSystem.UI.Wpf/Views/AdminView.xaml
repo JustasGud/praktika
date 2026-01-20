@@ -1,0 +1,209 @@
+<UserControl x:Class="UtilityBillingSystem.UI.Wpf.Views.AdminView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Administratoriaus valdymas" Style="{StaticResource TitleText}"/>
+            <TextBlock Text="Tvarkykite bendrijas, paslaugas ir vartotojus. Pasirinkus eilutę lentelėje, forma užpildoma automatiškai." Style="{StaticResource HintText}"/>
+        </StackPanel>
+
+        <Border Grid.Row="2" Style="{StaticResource Card}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Foreground="{StaticResource Danger}" TextWrapping="Wrap" Text="{Binding ErrorMessage}"/>
+
+                <TabControl Grid.Row="1" Margin="0,10,0,0" SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}">
+
+                    <!-- ===== Communities ===== -->
+                    <TabItem Header="Bendrijos">
+                        <Grid Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="320"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Form card -->
+                            <Border Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Bendrijos informacija" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Pavadinimas"/>
+                                    <TextBox Text="{Binding CommunityName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Adresas"/>
+                                    <TextBox Text="{Binding CommunityAddress, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                                        <Button Content="Pridėti" Command="{Binding AddCommunityCommand}"/>
+                                        <Button Content="Atnaujinti" Style="{StaticResource SecondaryButton}" Command="{Binding UpdateCommunityCommand}"/>
+                                        <Button Content="Šalinti" Style="{StaticResource DangerButton}" Command="{Binding DeleteCommunityCommand}" Margin="0,0,0,0"/>
+                                    </StackPanel>
+
+                                    <TextBlock Margin="0,10,0,0" Foreground="{StaticResource MutedText}" FontSize="12" TextWrapping="Wrap">
+                                        Patarimas: spauskite ant bendrijos lentelėje, kad užpildytumėte formą ir galėtumėte atnaujinti/šalinti.
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Table card -->
+                            <Border Grid.Column="2" Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Bendrijų sąrašas" FontWeight="SemiBold"/>
+                                    <DataGrid ItemsSource="{Binding Communities}" SelectedItem="{Binding SelectedCommunity}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,10,0,0">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                                            <DataGridTextColumn Header="Pavadinimas" Binding="{Binding Name}" Width="*"/>
+                                            <DataGridTextColumn Header="Adresas" Binding="{Binding Address}" Width="2*"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+
+                    <!-- ===== Services ===== -->
+                    <TabItem Header="Paslaugos">
+                        <Grid Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="320"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Form card -->
+                            <Border Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Paslaugos informacija" FontWeight="SemiBold"/>
+
+                                    <TextBlock Text="Pavadinimas"/>
+                                    <TextBox Text="{Binding ServiceName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Aprašymas"/>
+                                    <TextBox Text="{Binding ServiceDescription, UpdateSourceTrigger=PropertyChanged}" AcceptsReturn="True" Height="80" TextWrapping="Wrap"/>
+
+                                    <CheckBox Content="Aktyvi" IsChecked="{Binding ServiceIsActive}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                                        <Button Content="Pridėti" Command="{Binding AddServiceCommand}"/>
+                                        <Button Content="Atnaujinti" Style="{StaticResource SecondaryButton}" Command="{Binding UpdateServiceCommand}"/>
+                                        <Button Content="Šalinti" Style="{StaticResource DangerButton}" Command="{Binding DeleteServiceCommand}" Margin="0,0,0,0"/>
+                                    </StackPanel>
+
+                                    <TextBlock Margin="0,10,0,0" Foreground="{StaticResource MutedText}" FontSize="12" TextWrapping="Wrap">
+                                        Aktyvios paslaugos rodomos vadybininkui priskyrimui ir kainų valdymui.
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Table card -->
+                            <Border Grid.Column="2" Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Paslaugų sąrašas" FontWeight="SemiBold"/>
+                                    <DataGrid ItemsSource="{Binding Services}" SelectedItem="{Binding SelectedService}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,10,0,0">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                                            <DataGridTextColumn Header="Pavadinimas" Binding="{Binding Name}" Width="*"/>
+                                            <DataGridTextColumn Header="Aprašas" Binding="{Binding Description}" Width="2*"/>
+                                            <DataGridCheckBoxColumn Header="Aktyvi" Binding="{Binding IsActive, Mode=OneWay}" Width="90"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+
+                    <!-- ===== Users ===== -->
+                    <TabItem Header="Vartotojai">
+                        <Grid Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Form card -->
+                            <Border Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Naujas vartotojas" FontWeight="SemiBold"/>
+
+                                    <TextBlock Text="Vardas"/>
+                                    <TextBox Text="{Binding UserFirstName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Pavardė"/>
+                                    <TextBox Text="{Binding UserLastName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Rolė"/>
+                                    <ComboBox ItemsSource="{Binding RoleOptions}"
+                                              DisplayMemberPath="Display"
+                                              SelectedValuePath="Value"
+                                              SelectedValue="{Binding UserRole}"/>
+
+                                    <TextBlock Text="Bendrija (tik gyventojui)"/>
+                                    <ComboBox ItemsSource="{Binding CommunityChoices}"
+                                              SelectedItem="{Binding UserCommunity}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <Button Content="Sukurti" Command="{Binding CreateUserCommand}" Margin="0,6,0,0"/>
+
+                                    <Separator Margin="0,14,0,14"/>
+
+                                    <TextBlock Text="Pasirinkto vartotojo valdymas" FontWeight="SemiBold"/>
+                                    <TextBlock Foreground="{StaticResource MutedText}" FontSize="12" TextWrapping="Wrap">
+                                        Pasirinkite vartotoją dešinėje lentelėje ir tada galite deaktyvuoti arba pakeisti jo bendriją.
+                                    </TextBlock>
+
+                                    <Button Content="Deaktyvuoti pasirinktą" Style="{StaticResource DangerButton}"
+                                            Command="{Binding DeactivateUserCommand}" Margin="0,8,0,0"/>
+
+                                    <TextBlock Text="Keisti vartotojo bendriją" Margin="0,10,0,0"/>
+                                    <ComboBox ItemsSource="{Binding CommunityChoices}"
+                                              SelectedItem="{Binding SelectedUserCommunity}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <Button Content="Keisti bendriją" Command="{Binding UpdateUserCommunityCommand}" Margin="0,6,0,0"/>
+
+                                    <TextBlock Margin="0,10,0,0" Foreground="{StaticResource MutedText}" FontSize="12" TextWrapping="Wrap">
+                                        Generavimas: username = vardas (jei užimtas – pridedamas skaičius), password = pavardė.
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Table card -->
+                            <Border Grid.Column="2" Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Vartotojų sąrašas" FontWeight="SemiBold"/>
+                                    <DataGrid ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,10,0,0">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                                            <DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="120"/>
+                                            <DataGridTextColumn Header="Vardas" Binding="{Binding FirstName}" Width="120"/>
+                                            <DataGridTextColumn Header="Pavardė" Binding="{Binding LastName}" Width="120"/>
+                                            <DataGridTextColumn Header="Rolė" Binding="{Binding RoleLt}" Width="140"/>
+                                            <DataGridTextColumn Header="Bendrija" Binding="{Binding CommunityNameLt}" Width="*"/>
+                                            <DataGridCheckBoxColumn Header="Aktyvus" Binding="{Binding IsActive, Mode=OneWay}" Width="90"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+
+                </TabControl>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

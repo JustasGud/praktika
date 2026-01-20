@@ -1,0 +1,17 @@
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Infrastructure.deps.json
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Infrastructure.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Infrastructure.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Application.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Domain.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Application.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\bin\Debug\net8.0\UtilityBillingSystem.Domain.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityB.55760A2C.Up2Date
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\refint\UtilityBillingSystem.Infrastructure.dll
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\UtilityBillingSystem.Infrastructure.pdb
+C:\Users\gudon\Downloads\UtilityBillingSystem_LocalDB_UI_Improved\src\UtilityBillingSystem.Infrastructure\obj\Debug\net8.0\ref\UtilityBillingSystem.Infrastructure.dll

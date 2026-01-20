@@ -1,0 +1,33 @@
+<Window x:Class="UtilityBillingSystem.UI.Wpf.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Prisijungimas" Height="380" Width="440" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="{StaticResource AppBg}">
+        <Border Background="{StaticResource CardBg}" CornerRadius="14" Padding="22"
+                HorizontalAlignment="Center" VerticalAlignment="Center" Width="360">
+            <StackPanel>
+                <TextBlock Text="Komunalinių paslaugų sistema" Style="{StaticResource TitleText}"/>
+                <TextBlock Text="Prisijunkite pasirinkta rolė (admin / vadybininkas / gyventojas)." Foreground="{StaticResource MutedText}" TextWrapping="Wrap"/>
+
+                <Separator Margin="0,12,0,12"/>
+
+                <TextBlock Text="Prisijungimo vardas"/>
+                <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource InputTextBoxStyle}"/>
+
+                <TextBlock Text="Slaptažodis" Margin="0,10,0,0"/>
+                <PasswordBox x:Name="PwdBox" Style="{StaticResource InputPasswordBoxStyle}"/>
+
+                <TextBlock Foreground="{StaticResource Danger}" TextWrapping="Wrap" Margin="0,10,0,0"
+                           Text="{Binding ErrorMessage}" />
+
+                <Button Height="38" Margin="0,14,0,0" Content="Prisijungti" Style="{StaticResource PrimaryButtonStyle}"
+                        Click="Login_Click"/>
+
+                <TextBlock Margin="0,10,0,0" Foreground="{StaticResource MutedText}" FontSize="12" TextWrapping="Wrap">
+                    Testui: jei DB nauja, automatiškai sukuriamas admin vartotojas (username: admin, password: admin).
+                </TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

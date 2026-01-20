@@ -1,0 +1,124 @@
+<UserControl x:Class="UtilityBillingSystem.UI.Wpf.Views.ManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Vadybininko valdymas" Style="{StaticResource TitleText}"/>
+            <TextBlock Text="Priskirkite paslaugas konkrečioms bendrijoms ir nustatykite kainas." Style="{StaticResource HintText}"/>
+        </StackPanel>
+
+        <Border Grid.Row="2" Style="{StaticResource Card}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Foreground="{StaticResource Danger}" TextWrapping="Wrap" Text="{Binding ErrorMessage}"/>
+
+                <TabControl Grid.Row="1" Margin="0,10,0,0" SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}">
+
+                    <!-- ===== Assign services ===== -->
+                    <TabItem Header="Priskyrimas">
+                        <Grid Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="1) Pasirinkite bendriją" FontWeight="SemiBold"/>
+                                    <ComboBox ItemsSource="{Binding Communities}"
+                                              SelectedItem="{Binding SelectedCommunity}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <TextBlock Text="2) Pasirinkite paslaugą" FontWeight="SemiBold"/>
+                                    <ComboBox ItemsSource="{Binding Services}"
+                                              SelectedItem="{Binding SelectedService}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <Button Content="Priskirti paslaugą" Command="{Binding AssignCommand}"/>
+
+                                    <TextBlock Text="Pastaba: priskyrimo sąrašas dešinėje atsinaujina automatiškai." Foreground="{StaticResource MutedText}" FontSize="12" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Grid.Column="2" Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Priskirtos paslaugos" FontWeight="SemiBold"/>
+                                    <DataGrid ItemsSource="{Binding AssignedServices}"
+                                              AutoGenerateColumns="False" IsReadOnly="True" Margin="0,10,0,0">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="Paslauga" Binding="{Binding ServiceName}" Width="*"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+
+                    <!-- ===== Prices ===== -->
+                    <TabItem Header="Kainos">
+                        <Grid Margin="6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="1) Pasirinkite bendriją" FontWeight="SemiBold"/>
+                                    <ComboBox ItemsSource="{Binding Communities}"
+                                              SelectedItem="{Binding SelectedCommunity}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <TextBlock Text="2) Pasirinkite paslaugą" FontWeight="SemiBold"/>
+                                    <ComboBox ItemsSource="{Binding Services}"
+                                              SelectedItem="{Binding SelectedService}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <Button Content="Rodyti dabartinę kainą" Command="{Binding LoadCurrentPriceCommand}"/>
+
+                                    <Separator Margin="0,8,0,8"/>
+
+                                    <TextBlock Text="3) Nustatykite naują kainą" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Kaina (pvz. 12,50)" Foreground="{StaticResource MutedText}" FontSize="12"/>
+                                    <TextBox Text="{Binding NewPrice}"/>
+
+                                    <TextBlock Text="Galioja nuo" Foreground="{StaticResource MutedText}" FontSize="12"/>
+                                    <DatePicker SelectedDate="{Binding EffectiveFrom}"/>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="Nustatyti" Command="{Binding SetPriceCommand}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Grid.Column="2" Style="{StaticResource Card}">
+                                <StackPanel>
+                                    <TextBlock Text="Dabartinė kaina" FontWeight="SemiBold"/>
+                                    <Border Background="#F9FAFB" BorderBrush="#E5E7EB" BorderThickness="1" CornerRadius="10" Padding="12" Margin="0,10,0,0">
+                                        <TextBlock Text="{Binding CurrentPriceText}" TextWrapping="Wrap"/>
+                                    </Border>
+
+                                    <TextBlock Text="Patarimas: jei gaunate klaidą „Paslauga nepriskirta“, pirmiausia priskirkite paslaugą skiltyje „Priskyrimas“." Foreground="{StaticResource MutedText}" FontSize="12" Margin="0,12,0,0" TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+
+                </TabControl>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
